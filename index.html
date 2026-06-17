@@ -29,7 +29,7 @@
   .korea-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.4); border-radius: 8px; padding: 6px 16px; font-size: 0.85rem; font-weight: 700; color: #ff8080; }
   .grid-wrapper { display: flex; align-items: flex-start; }
   .mexico-axis { display: flex; flex-direction: column; align-items: center; margin-top: 52px; }
-  .mexico-label-side { writing-mode: vertical-rl; transform: rotate(180deg); background: rgba(26,107,47,0.2); border: 1px solid rgba(26,107,47,0.5); border-radius: 8px; padding: 12px 6px; font-size: 0.8rem; font-weight: 700; color: #60d080; margin-bottom: 4px; }
+  .mexico-label-side { writing-mode: vertical-lr; background: rgba(26,107,47,0.2); border: 1px solid rgba(26,107,47,0.5); border-radius: 8px; padding: 12px 6px; font-size: 0.8rem; font-weight: 700; color: #60d080; margin-bottom: 4px; }
   .col-headers { display: grid; grid-template-columns: 40px repeat(5,1fr); gap: 4px; margin-bottom: 4px; min-width: 360px; }
   .col-header { text-align: center; padding: 8px 4px; font-size: 0.75rem; font-weight: 700; color: #ff9090; }
   .grid-rows { display: flex; flex-direction: column; gap: 4px; min-width: 360px; }
@@ -175,7 +175,7 @@ function renderGrid() {
   let approvedCount = 0;
   let filledCount = 0;
 
-  for (let mex = 5; mex >= 1; mex--) {
+  for (let mex = 1; mex <= 5; mex++) {
     const row = document.createElement('div');
     row.className = 'grid-row';
     const rowHeader = document.createElement('div');
