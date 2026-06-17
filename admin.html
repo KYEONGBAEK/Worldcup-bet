@@ -101,7 +101,7 @@ const SUPABASE_URL = 'https://uknywyszkffaeddnusjx.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrbnl3eXN6a2ZmYWVkZG51c2p4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2Njk1ODMsImV4cCI6MjA5NzI0NTU4M30.HGqPSLeKq6azZ7RM_nfbkJgeslOCcS0ICvFrlPGjq44';
 const BET_AMOUNT = 50000;
 
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 let allBets = [];
 
 function login() {
@@ -123,7 +123,7 @@ function logout() {
 }
 
 async function loadAndRender() {
-  const { data, error } = await supabase.from('bets').select('*').order('created_at', { ascending: true });
+  const { data, error } = await supabaseClient.from('bets').select('*').order('created_at', { ascending: true });
   if (error) { console.error(error); return; }
   allBets = data;
   renderAdmin();
@@ -199,7 +199,7 @@ function renderGrid() {
 }
 
 async function approveBet(id) {
-  const { error } = await supabase.from('bets').update({ status: 'approved' }).eq('id', id);
+  const { error } = await supabaseClient.from('bets').update({ status: 'approved' }).eq('id', id);
   if (error) { showToast('오류 발생'); return; }
   await loadAndRender();
   const bet = allBets.find(b => b.id === id);
@@ -208,7 +208,7 @@ async function approveBet(id) {
 
 async function rejectBet(id, name) {
   if (!confirm(`${name}님의 신청을 거절하시겠습니까?`)) return;
-  const { error } = await supabase.from('bets').delete().eq('id', id);
+  const { error } = await supabaseClient.from('bets').delete().eq('id', id);
   if (error) { showToast('오류 발생'); return; }
   await loadAndRender();
   showToast(`${name}님 신청 거절됨`);
@@ -216,14 +216,14 @@ async function rejectBet(id, name) {
 
 async function revokeBet(id, name) {
   if (!confirm(`${name}님의 승인을 취소하시겠습니까?`)) return;
-  const { error } = await supabase.from('bets').update({ status: 'pending' }).eq('id', id);
+  const { error } = await supabaseClient.from('bets').update({ status: 'pending' }).eq('id', id);
   if (error) { showToast('오류 발생'); return; }
   await loadAndRender();
   showToast(`${name}님 승인 취소됨`);
 }
 
 // 실시간 구독
-supabase.channel('admin-channel')
+supabaseClient.channel('admin-channel')
   .on('postgres_changes', { event: '*', schema: 'public', table: 'bets' }, () => {
     loadAndRender();
   })
