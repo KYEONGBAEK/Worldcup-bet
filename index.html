@@ -30,10 +30,10 @@
   .grid-wrapper { display: flex; align-items: flex-start; }
   .mexico-axis { display: flex; flex-direction: column; align-items: center; margin-top: 52px; }
   .mexico-label-side { writing-mode: vertical-lr; background: rgba(26,107,47,0.2); border: 1px solid rgba(26,107,47,0.5); border-radius: 8px; padding: 12px 6px; font-size: 0.8rem; font-weight: 700; color: #60d080; margin-bottom: 4px; }
-  .col-headers { display: grid; grid-template-columns: 40px repeat(5,1fr); gap: 4px; margin-bottom: 4px; min-width: 360px; }
+  .col-headers { display: grid; grid-template-columns: 40px repeat(6,1fr); gap: 4px; margin-bottom: 4px; min-width: 360px; }
   .col-header { text-align: center; padding: 8px 4px; font-size: 0.75rem; font-weight: 700; color: #ff9090; }
   .grid-rows { display: flex; flex-direction: column; gap: 4px; min-width: 360px; }
-  .grid-row { display: grid; grid-template-columns: 40px repeat(5,1fr); gap: 4px; }
+  .grid-row { display: grid; grid-template-columns: 40px repeat(6,1fr); gap: 4px; }
   .row-header { display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #70d090; background: rgba(26,107,47,0.15); border-radius: 6px; padding: 4px; }
   .grid-cell { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 6px; cursor: pointer; transition: all 0.2s; min-height: 88px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
   .grid-cell:hover { border-color: var(--gold); background: var(--surface2); transform: translateY(-1px); }
@@ -120,7 +120,7 @@
     <div style="flex:1;overflow-x:auto;">
       <div class="col-headers">
         <div class="col-header"></div>
-        <div class="col-header">1골</div><div class="col-header">2골</div>
+        <div class="col-header">0골</div><div class="col-header">1골</div><div class="col-header">2골</div>
         <div class="col-header">3골</div><div class="col-header">4골</div><div class="col-header">5골</div>
       </div>
       <div class="grid-rows" id="gridRows"><div class="loading">데이터 불러오는 중...</div></div>
@@ -181,7 +181,7 @@ function renderGrid() {
     approvedCount += list.filter(b => b.status === 'approved').length;
   }
 
-  for (let mex = 1; mex <= 5; mex++) {
+  for (let mex = 0; mex <= 5; mex++) {
     const row = document.createElement('div');
     row.className = 'grid-row';
     const rowHeader = document.createElement('div');
@@ -189,7 +189,7 @@ function renderGrid() {
     rowHeader.textContent = mex + '골';
     row.appendChild(rowHeader);
 
-    for (let kor = 1; kor <= 5; kor++) {
+    for (let kor = 0; kor <= 5; kor++) {
       const key = `${kor}-${mex}`;
       const cellBets = bets[key] || [];
       const approved = cellBets.filter(b => b.status === 'approved');
