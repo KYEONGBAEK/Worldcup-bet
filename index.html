@@ -243,10 +243,10 @@ function openModal(kor, mex) {
   document.getElementById('modalSubtitle').textContent = '이 칸을 선택하시겠습니까?';
   document.getElementById('modalScoreDisplay').innerHTML =
     `<span class="kor">🇰🇷 한국 ${kor}골</span> &nbsp;:&nbsp; <span class="mex">${mex}골 멕시코 🇲🇽</span>`;
-  document.getElementById('modalInfo').innerHTML =
-    `💰 베팅금액: <strong>50,000원</strong><br>` +
-    `📊 전체 참가: ${totalApproved}명 / 이 칸: ${approved.length}명 승인 / ${pending.length}명 대기중<br>` +
-    `🏆 입금 확인 후 관리자가 승인하면 확정됩니다`;
+document.getElementById('modalInfo').innerHTML =
+    '💰 베팅금액: <strong>50,000원</strong><br>' +
+    '📊 전체 참가: ' + totalApproved + '명 / 이 칸: ' + approved.length + '명 승인 / ' + pending.length + '명 대기중<br>' +
+    '🏆 입금 확인 후 관리자가 승인하면 확정됩니다';
 
   const holdersDiv = document.getElementById('currentHolders');
   holdersDiv.innerHTML = approved.length > 0
