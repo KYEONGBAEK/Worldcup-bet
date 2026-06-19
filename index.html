@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 북중미 월드컵 🇰🇷 한국 vs 멕시코 🇲🇽 베팅</title>
+<title>2026 북중미 월드컵 🇰🇷 한국 vs 남아공 RSA 베팅</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -28,8 +28,8 @@
   .axis-label-top { text-align: center; margin-bottom: 8px; }
   .korea-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.4); border-radius: 8px; padding: 6px 16px; font-size: 0.85rem; font-weight: 700; color: #ff8080; }
   .grid-wrapper { display: flex; align-items: flex-start; }
-  .mexico-axis { display: flex; flex-direction: column; align-items: center; margin-top: 52px; }
-  .mexico-label-side { writing-mode: vertical-lr; background: rgba(26,107,47,0.2); border: 1px solid rgba(26,107,47,0.5); border-radius: 8px; padding: 12px 6px; font-size: 0.8rem; font-weight: 700; color: #60d080; margin-bottom: 4px; }
+  .rsa-axis { display: flex; flex-direction: column; align-items: center; margin-top: 52px; }
+  .rsa-label-side { writing-mode: vertical-lr; background: rgba(26,107,47,0.2); border: 1px solid rgba(26,107,47,0.5); border-radius: 8px; padding: 12px 6px; font-size: 0.8rem; font-weight: 700; color: #60d080; margin-bottom: 4px; }
   .col-headers { display: grid; grid-template-columns: 40px repeat(6,1fr); gap: 4px; margin-bottom: 4px; min-width: 360px; }
   .col-header { text-align: center; padding: 8px 4px; font-size: 0.75rem; font-weight: 700; color: #ff9090; }
   .grid-rows { display: flex; flex-direction: column; gap: 4px; min-width: 360px; }
@@ -57,7 +57,7 @@
   .modal-subtitle { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.2rem; }
   .modal-score-display { background: var(--surface2); border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 800; }
   .modal-score-display span.kor { color: #ff9090; }
-  .modal-score-display span.mex { color: #70d090; }
+  .modal-score-display span.rsa { color: #70d090; }
   .modal-info { background: rgba(240,180,41,0.1); border: 1px solid rgba(240,180,41,0.2); border-radius: 8px; padding: 10px 12px; font-size: 0.78rem; color: #f0c060; margin-bottom: 1rem; line-height: 1.6; }
   .current-holders { margin-bottom: 1rem; }
   .current-holders-title { font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; }
@@ -89,8 +89,8 @@
       <img src="https://flagcdn.com/w40/kr.png" style="height:1.6em;vertical-align:middle;">
       <span>한국</span>
       <span class="vs-text">VS</span>
-      <span>멕시코</span>
-      <img src="https://flagcdn.com/w40/mx.png" style="height:1.6em;vertical-align:middle;">
+      <span>남아공</span>
+      <img src="https://flagcdn.com/w40/za.png" style="height:1.6em;vertical-align:middle;">
     </div>
   </h1>
   <p class="subtitle">북중미 월드컵 스코어 베팅 🏆</p>
@@ -102,6 +102,9 @@
   <div class="stat-item"><span class="stat-value" id="stat-remaining">-</span><span class="stat-label">남은 칸</span></div>
 </div>
 
+<div style="background:rgba(192,57,43,0.15);border:1px solid rgba(192,57,43,0.4);border-radius:10px;padding:10px 16px;margin:0.5rem 1rem;text-align:center;font-size:0.85rem;color:#ff9090;font-weight:700;">
+  🏆 이월상금: 550,000원 (전회차 미당첨 이월)
+</div>
 <div class="notice">
   💰 1인 베팅 금액: <strong>5만원</strong> &nbsp;|&nbsp; 입금 후 관리자 승인 시 확정됩니다<br>
   🏦 5만원 현금 or 카카오송금 이경백 평가사에게 &nbsp;|&nbsp; 한 사람당 1칸만 신청 가능
@@ -116,7 +119,7 @@
 <div class="grid-section">
   <div class="axis-label-top"><span class="korea-label"><img src="https://flagcdn.com/w40/kr.png" style="height:1.2em;vertical-align:middle;"> 한국 득점 →</span></div>
   <div class="grid-wrapper">
-    <div class="mexico-axis"><div class="mexico-label-side"><img src="https://flagcdn.com/w40/mx.png" style="height:1.2em;vertical-align:middle;"> 멕시코 득점 ↑</div></div>
+    <div class="rsa-axis"><div class="rsa-label-side"><img src="https://flagcdn.com/w40/za.png" style="height:1.2em;vertical-align:middle;"> 남아공 득점 ↑</div></div>
     <div style="flex:1;overflow-x:auto;">
       <div class="col-headers">
         <div class="col-header"></div>
@@ -153,6 +156,7 @@
 const SUPABASE_URL = 'https://uknywyszkffaeddnusjx.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVrbnl3eXN6a2ZmYWVkZG51c2p4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2Njk1ODMsImV4cCI6MjA5NzI0NTU4M30.HGqPSLeKq6azZ7RM_nfbkJgeslOCcS0ICvFrlPGjq44';
 const BET_AMOUNT = 50000;
+const ROLLOVER = 550000;
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -181,16 +185,16 @@ function renderGrid() {
     approvedCount += list.filter(b => b.status === 'approved').length;
   }
 
-  for (let mex = 0; mex <= 5; mex++) {
+  for (let rsa = 0; rsa <= 5; rsa++) {
     const row = document.createElement('div');
     row.className = 'grid-row';
     const rowHeader = document.createElement('div');
     rowHeader.className = 'row-header';
-    rowHeader.textContent = mex + '골';
+    rowHeader.textContent = rsa + '골';
     row.appendChild(rowHeader);
 
     for (let kor = 0; kor <= 5; kor++) {
-      const key = `${kor}-${mex}`;
+      const key = `${kor}-${rsa}`;
       const cellBets = bets[key] || [];
       const approved = cellBets.filter(b => b.status === 'approved');
       const pending = cellBets.filter(b => b.status === 'pending');
@@ -203,8 +207,8 @@ function renderGrid() {
       if (approved.length > 0) cell.classList.add('has-approved');
       if (cellBets.length === 0) cell.classList.add('empty-cell');
       cell.dataset.kor = kor;
-      cell.dataset.mex = mex;
-      cell.onclick = () => openModal(kor, mex);
+      cell.dataset.rsa = rsa;
+      cell.onclick = () => openModal(kor, rsa);
 
       let innerHtml = '';
       if (cellBets.length === 0) {
@@ -215,7 +219,7 @@ function renderGrid() {
         pending.forEach(b => { innerHtml += `<span class="name-badge pending">⏳ ${b.name}</span>`; });
         innerHtml += `</div>`;
         if (approved.length > 0) {
-          const payout = Math.round((approvedCount * BET_AMOUNT) / approved.length);
+          const payout = Math.round(((approvedCount * BET_AMOUNT) + ROLLOVER) / approved.length);
           innerHtml += `<div class="cell-payout">${payout.toLocaleString()}원</div>`;
           innerHtml += `<div class="cell-count">${approved.length}명 공동</div>`;
         }
@@ -226,14 +230,15 @@ function renderGrid() {
     rows.appendChild(row);
   }
 
+const totalPool = (approvedCount * BET_AMOUNT) + ROLLOVER;
   document.getElementById('stat-participants').textContent = approvedCount + '명';
-  document.getElementById('stat-pool').textContent = (approvedCount * BET_AMOUNT).toLocaleString() + '원';
+  document.getElementById('stat-pool').textContent = totalPool.toLocaleString() + '원';
   document.getElementById('stat-remaining').textContent = (25 - filledCount) + '칸';
 }
 
-function openModal(kor, mex) {
-  selectedCell = { kor, mex };
-  const key = `${kor}-${mex}`;
+function openModal(kor, rsa) {
+  selectedCell = { kor, rsa };
+  const key = `${kor}-${rsa}`;
   const cellBets = bets[key] || [];
   const approved = cellBets.filter(b => b.status === 'approved');
   const pending = cellBets.filter(b => b.status === 'pending');
@@ -242,7 +247,7 @@ function openModal(kor, mex) {
   document.getElementById('modalTitle').textContent = '스코어 선택';
   document.getElementById('modalSubtitle').textContent = '이 칸을 선택하시겠습니까?';
   document.getElementById('modalScoreDisplay').innerHTML =
-    `<span class="kor">🇰🇷 한국 ${kor}골</span> &nbsp;:&nbsp; <span class="mex">${mex}골 멕시코 🇲🇽</span>`;
+    `<span class="kor">🇰🇷 한국 ${kor}골</span> &nbsp;:&nbsp; <span class="rsa">${rsa}골 남아공 🇲🇽</span>`;
 document.getElementById('modalInfo').innerHTML =
     '💰 베팅금액: <strong>50,000원</strong><br>' +
     '📊 전체 참가: ' + totalApproved + '명 / 이 칸: ' + approved.length + '명 승인 / ' + pending.length + '명 대기중<br>' +
@@ -289,9 +294,9 @@ async function submitRequest() {
   btn.disabled = true;
   btn.textContent = '신청 중...';
 
-  const { kor, mex } = selectedCell;
+  const { kor, rsa } = selectedCell;
   const { error } = await supabaseClient.from('bets').insert({
-    cell_key: `${kor}-${mex}`,
+    cell_key: `${kor}-${rsa}`,
     name: name,
     status: 'pending'
   });
