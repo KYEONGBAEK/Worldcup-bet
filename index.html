@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 북중미 월드컵 🇰🇷 한국 vs 남아공 RSA 베팅</title>
+<title>2026 북중미 월드컵 잉글랜드 vs 아르헨티나 베팅</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
@@ -16,7 +16,6 @@
   .header-badge { display: inline-block; background: var(--gold); color: #1a1a1a; font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 20px; letter-spacing: 1.5px; margin-bottom: 12px; }
   header h1 { font-size: clamp(1.3rem,4vw,2.2rem); font-weight: 800; line-height: 1.3; }
   .title-flags { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
-  .flag-emoji { font-size: 1.8em; }
   .vs-text { background: var(--gold); color: #1a1a1a; font-size: 0.9rem; font-weight: 900; padding: 4px 12px; border-radius: 6px; }
   .subtitle { margin-top: 8px; color: var(--muted); font-size: 0.85rem; }
   .stats-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
@@ -26,15 +25,15 @@
   .notice { background: rgba(240,180,41,0.1); border: 1px solid rgba(240,180,41,0.3); border-radius: 10px; padding: 12px 16px; margin: 1rem; font-size: 0.82rem; color: #f0c060; text-align: center; line-height: 1.6; }
   .grid-section { padding: 0 1rem 2rem; overflow-x: auto; }
   .axis-label-top { text-align: center; margin-bottom: 8px; }
-  .korea-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(192,57,43,0.15); border: 1px solid rgba(192,57,43,0.4); border-radius: 8px; padding: 6px 16px; font-size: 0.85rem; font-weight: 700; color: #ff8080; }
+  .eng-label { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,16,46,0.15); border: 1px solid rgba(200,16,46,0.4); border-radius: 8px; padding: 6px 16px; font-size: 0.85rem; font-weight: 700; color: #ff8080; }
   .grid-wrapper { display: flex; align-items: flex-start; }
-  .rsa-axis { display: flex; flex-direction: column; align-items: center; margin-top: 52px; }
-  .rsa-label-side { writing-mode: vertical-lr; background: rgba(26,107,47,0.2); border: 1px solid rgba(26,107,47,0.5); border-radius: 8px; padding: 12px 6px; font-size: 0.8rem; font-weight: 700; color: #60d080; margin-bottom: 4px; }
+  .arg-axis { display: flex; flex-direction: column; align-items: center; margin-top: 52px; }
+  .arg-label-side { writing-mode: vertical-lr; background: rgba(116,172,223,0.15); border: 1px solid rgba(116,172,223,0.4); border-radius: 8px; padding: 12px 6px; font-size: 0.8rem; font-weight: 700; color: #74ACDF; margin-bottom: 4px; }
   .col-headers { display: grid; grid-template-columns: 40px repeat(6,1fr); gap: 4px; margin-bottom: 4px; min-width: 360px; }
   .col-header { text-align: center; padding: 8px 4px; font-size: 0.75rem; font-weight: 700; color: #ff9090; }
   .grid-rows { display: flex; flex-direction: column; gap: 4px; min-width: 360px; }
   .grid-row { display: grid; grid-template-columns: 40px repeat(6,1fr); gap: 4px; }
-  .row-header { display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #70d090; background: rgba(26,107,47,0.15); border-radius: 6px; padding: 4px; }
+  .row-header { display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #74ACDF; background: rgba(116,172,223,0.1); border-radius: 6px; padding: 4px; }
   .grid-cell { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 6px; cursor: pointer; transition: all 0.2s; min-height: 88px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
   .grid-cell:hover { border-color: var(--gold); background: var(--surface2); transform: translateY(-1px); }
   .grid-cell.empty-cell .cell-plus { font-size: 1.2rem; color: var(--muted); opacity: 0.5; }
@@ -56,8 +55,8 @@
   .modal-title { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
   .modal-subtitle { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.2rem; }
   .modal-score-display { background: var(--surface2); border-radius: 10px; padding: 12px; text-align: center; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 800; }
-  .modal-score-display span.kor { color: #ff9090; }
-  .modal-score-display span.rsa { color: #70d090; }
+  .modal-score-display span.eng { color: #ff9090; }
+  .modal-score-display span.arg { color: #74ACDF; }
   .modal-info { background: rgba(240,180,41,0.1); border: 1px solid rgba(240,180,41,0.2); border-radius: 8px; padding: 10px 12px; font-size: 0.78rem; color: #f0c060; margin-bottom: 1rem; line-height: 1.6; }
   .current-holders { margin-bottom: 1rem; }
   .current-holders-title { font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; }
@@ -82,15 +81,15 @@
 <body>
 
 <header>
-<div class="header-badge">⚽ 2026 FIFA WORLD CUP</div>
-  <p style="font-size:0.9rem;color:#f0c060;margin-bottom:8px;font-weight:700;">🏆 나라감정평가법인 부산지역본부 월드컵토토</p>
+  <div class="header-badge">⚽ 2026 FIFA WORLD CUP</div>
+  <p style="font-size:0.9rem;color:#f0c060;margin-bottom:12px;font-weight:700;">🏆 나라감정평가법인 부산지역본부 월드컵토토</p>
   <h1>
     <div class="title-flags">
-      <img src="https://flagcdn.com/w40/kr.png" style="height:1.6em;vertical-align:middle;">
-      <span>한국</span>
+      <img src="https://flagcdn.com/w40/gb-eng.png" style="height:1.6em;vertical-align:middle;">
+      <span>잉글랜드</span>
       <span class="vs-text">VS</span>
-      <span>남아공</span>
-      <img src="https://flagcdn.com/w40/za.png" style="height:1.6em;vertical-align:middle;">
+      <span>아르헨티나</span>
+      <img src="https://flagcdn.com/w40/ar.png" style="height:1.6em;vertical-align:middle;">
     </div>
   </h1>
   <p class="subtitle">북중미 월드컵 스코어 베팅 🏆</p>
@@ -117,9 +116,9 @@
 </div>
 
 <div class="grid-section">
-  <div class="axis-label-top"><span class="korea-label"><img src="https://flagcdn.com/w40/kr.png" style="height:1.2em;vertical-align:middle;"> 한국 득점 →</span></div>
+  <div class="axis-label-top"><span class="eng-label"><img src="https://flagcdn.com/w40/gb-eng.png" style="height:1.2em;vertical-align:middle;"> 잉글랜드 득점 →</span></div>
   <div class="grid-wrapper">
-    <div class="rsa-axis"><div class="rsa-label-side"><img src="https://flagcdn.com/w40/za.png" style="height:1.2em;vertical-align:middle;"> 남아공 득점 ↑</div></div>
+    <div class="arg-axis"><div class="arg-label-side"><img src="https://flagcdn.com/w40/ar.png" style="height:1.2em;vertical-align:middle;"> 아르헨티나 득점 ↑</div></div>
     <div style="flex:1;overflow-x:auto;">
       <div class="col-headers">
         <div class="col-header"></div>
@@ -164,64 +163,68 @@ let bets = {};
 let selectedCell = null;
 
 async function loadBets() {
-  const { data, error } = await supabaseClient.from('bets').select('*');
-  if (error) { console.error(error); return; }
-  bets = {};
-  data.forEach(row => {
-    if (!bets[row.cell_key]) bets[row.cell_key] = [];
-    bets[row.cell_key].push({ id: row.id, name: row.name, status: row.status });
-  });
-  renderGrid();
+  try {
+    const { data, error } = await supabaseClient.from('bets').select('*');
+    if (error) throw error;
+    bets = {};
+    data.forEach(function(row) {
+      if (!bets[row.cell_key]) bets[row.cell_key] = [];
+      bets[row.cell_key].push({ id: row.id, name: row.name, status: row.status });
+    });
+    renderGrid();
+  } catch(e) {
+    console.error('loadBets error:', e);
+  }
 }
 
 function renderGrid() {
   const rows = document.getElementById('gridRows');
   rows.innerHTML = '';
-  let filledCount = 0;
+  var filledCount = 0;
+  var approvedCount = 0;
 
-  // 전체 승인자 수 먼저 계산
-  let approvedCount = 0;
-  for (const list of Object.values(bets)) {
-    approvedCount += list.filter(b => b.status === 'approved').length;
-  }
+  Object.values(bets).forEach(function(list) {
+    approvedCount += list.filter(function(b) { return b.status === 'approved'; }).length;
+  });
 
-  for (let rsa = 0; rsa <= 5; rsa++) {
-    const row = document.createElement('div');
+  for (var arg = 0; arg <= 5; arg++) {
+    var row = document.createElement('div');
     row.className = 'grid-row';
-    const rowHeader = document.createElement('div');
+    var rowHeader = document.createElement('div');
     rowHeader.className = 'row-header';
-    rowHeader.textContent = rsa + '골';
+    rowHeader.textContent = arg + '골';
     row.appendChild(rowHeader);
 
-    for (let kor = 0; kor <= 5; kor++) {
-      const key = `${kor}-${rsa}`;
-      const cellBets = bets[key] || [];
-      const approved = cellBets.filter(b => b.status === 'approved');
-      const pending = cellBets.filter(b => b.status === 'pending');
+    for (var eng = 0; eng <= 5; eng++) {
+      var key = eng + '-' + arg;
+      var cellBets = bets[key] || [];
+      var approved = cellBets.filter(function(b) { return b.status === 'approved'; });
+      var pending = cellBets.filter(function(b) { return b.status === 'pending'; });
 
-       if (cellBets.length > 0) filledCount++;
+      if (cellBets.length > 0) filledCount++;
 
-      const cell = document.createElement('div');
+      var cell = document.createElement('div');
       cell.className = 'grid-cell';
       if (pending.length > 0 && approved.length === 0) cell.classList.add('has-pending');
       if (approved.length > 0) cell.classList.add('has-approved');
       if (cellBets.length === 0) cell.classList.add('empty-cell');
-      cell.dataset.kor = kor;
-      cell.dataset.rsa = rsa;
-      cell.onclick = () => openModal(kor, rsa);
 
-      let innerHtml = '';
+      (function(e, a) {
+        cell.onclick = function() { openModal(e, a); };
+      })(eng, arg);
+
+      var innerHtml = '';
       if (cellBets.length === 0) {
-        innerHtml = `<div class="cell-plus">+</div>`;
+        innerHtml = '<div class="cell-plus">+</div>';
       } else {
-        innerHtml = `<div class="cell-names">`;
-        approved.forEach(b => { innerHtml += `<span class="name-badge approved">${b.name}</span>`; });
-        pending.forEach(b => { innerHtml += `<span class="name-badge pending">⏳ ${b.name}</span>`; });
-        innerHtml += `</div>`;
+        innerHtml = '<div class="cell-names">';
+        approved.forEach(function(b) { innerHtml += '<span class="name-badge approved">' + b.name + '</span>'; });
+        pending.forEach(function(b) { innerHtml += '<span class="name-badge pending">⏳ ' + b.name + '</span>'; });
+        innerHtml += '</div>';
         if (approved.length > 0) {
-          const payout = Math.round(((approvedCount * BET_AMOUNT) + ROLLOVER) / approved.length);
-          innerHtml += `<div class="cell-payout">${payout.toLocaleString()}원</div>`;
-          innerHtml += `<div class="cell-count">${approved.length}명 공동</div>`;
+          var payout = Math.round(((approvedCount * BET_AMOUNT) + ROLLOVER) / approved.length);
+          innerHtml += '<div class="cell-payout">' + payout.toLocaleString() + '원</div>';
+          innerHtml += '<div class="cell-count">' + approved.length + '명 공동</div>';
         }
       }
       cell.innerHTML = innerHtml;
@@ -230,40 +233,45 @@ function renderGrid() {
     rows.appendChild(row);
   }
 
-const totalPool = (approvedCount * BET_AMOUNT) + ROLLOVER;
+  var totalPool = (approvedCount * BET_AMOUNT) + ROLLOVER;
   document.getElementById('stat-participants').textContent = approvedCount + '명';
   document.getElementById('stat-pool').textContent = totalPool.toLocaleString() + '원';
-  document.getElementById('stat-remaining').textContent = (25 - filledCount) + '칸';
+  document.getElementById('stat-remaining').textContent = (36 - filledCount) + '칸';
 }
 
-function openModal(kor, rsa) {
-  selectedCell = { kor, rsa };
-  const key = `${kor}-${rsa}`;
-  const cellBets = bets[key] || [];
-  const approved = cellBets.filter(b => b.status === 'approved');
-  const pending = cellBets.filter(b => b.status === 'pending');
-  const totalApproved = Object.values(bets).reduce((sum, list) => sum + list.filter(b => b.status === 'approved').length, 0);
+function openModal(eng, arg) {
+  selectedCell = { eng: eng, arg: arg };
+  var key = eng + '-' + arg;
+  var cellBets = bets[key] || [];
+  var approved = cellBets.filter(function(b) { return b.status === 'approved'; });
+  var pending = cellBets.filter(function(b) { return b.status === 'pending'; });
+  var totalApproved = 0;
+  Object.values(bets).forEach(function(list) {
+    totalApproved += list.filter(function(b) { return b.status === 'approved'; }).length;
+  });
 
   document.getElementById('modalTitle').textContent = '스코어 선택';
   document.getElementById('modalSubtitle').textContent = '이 칸을 선택하시겠습니까?';
   document.getElementById('modalScoreDisplay').innerHTML =
-    `<span class="kor">🇰🇷 한국 ${kor}골</span> &nbsp;:&nbsp; <span class="rsa">${rsa}골 남아공 🇲🇽</span>`;
-document.getElementById('modalInfo').innerHTML =
+    '<span class="eng">🏴󠁧󠁢󠁥󠁮󠁧󠁿 잉글랜드 ' + eng + '골</span> &nbsp;:&nbsp; <span class="arg">' + arg + '골 아르헨티나 🇦🇷</span>';
+  document.getElementById('modalInfo').innerHTML =
     '💰 베팅금액: <strong>50,000원</strong><br>' +
     '📊 전체 참가: ' + totalApproved + '명 / 이 칸: ' + approved.length + '명 승인 / ' + pending.length + '명 대기중<br>' +
     '🏆 입금 확인 후 관리자가 승인하면 확정됩니다';
 
-  const holdersDiv = document.getElementById('currentHolders');
-  holdersDiv.innerHTML = approved.length > 0
-    ? `<div class="current-holders-title">현재 이 칸 참여자:</div>` +
-      approved.map(b => `<span class="name-badge approved" style="display:inline-block;margin:2px;">${b.name}</span>`).join('')
-    : '';
+  var holdersDiv = document.getElementById('currentHolders');
+  if (approved.length > 0) {
+    holdersDiv.innerHTML = '<div class="current-holders-title">현재 이 칸 참여자:</div>' +
+      approved.map(function(b) { return '<span class="name-badge approved" style="display:inline-block;margin:2px;">' + b.name + '</span>'; }).join('');
+  } else {
+    holdersDiv.innerHTML = '';
+  }
 
   document.getElementById('nameInput').value = '';
   document.getElementById('submitBtn').disabled = false;
   document.getElementById('submitBtn').textContent = '신청하기';
   document.getElementById('modalOverlay').classList.add('active');
-  setTimeout(() => document.getElementById('nameInput').focus(), 300);
+  setTimeout(function() { document.getElementById('nameInput').focus(); }, 300);
 }
 
 function closeModal() {
@@ -279,51 +287,52 @@ document.getElementById('nameInput').addEventListener('keydown', function(e) {
 });
 
 async function submitRequest() {
-  const name = document.getElementById('nameInput').value.trim();
+  var name = document.getElementById('nameInput').value.trim();
   if (!name) { showToast('이름을 입력해주세요', true); return; }
 
-  // 중복 이름 체크
-  for (const list of Object.values(bets)) {
-    if (list.some(b => b.name === name)) {
-      showToast(`'${name}'님은 이미 다른 칸에 신청하셨습니다`, true);
-      return;
-    }
-  }
-
-  const btn = document.getElementById('submitBtn');
-  btn.disabled = true;
-  btn.textContent = '신청 중...';
-
-  const { kor, rsa } = selectedCell;
-  const { error } = await supabaseClient.from('bets').insert({
-    cell_key: `${kor}-${rsa}`,
-    name: name,
-    status: 'pending'
+  var duplicate = false;
+  Object.values(bets).forEach(function(list) {
+    if (list.some(function(b) { return b.name === name; })) duplicate = true;
   });
-
-  if (error) {
-    showToast('오류가 발생했습니다. 다시 시도해주세요', true);
-    btn.disabled = false;
-    btn.textContent = '신청하기';
+  if (duplicate) {
+    showToast("'" + name + "'님은 이미 다른 칸에 신청하셨습니다", true);
     return;
   }
 
-  closeModal();
-  await loadBets();
-  showToast(`✅ ${name}님 신청 완료! 입금 후 관리자 승인을 기다려주세요`);
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '신청 중...';
+
+  try {
+    var eng = selectedCell.eng;
+    var arg = selectedCell.arg;
+    var result = await supabaseClient.from('bets').insert({
+      cell_key: eng + '-' + arg,
+      name: name,
+      status: 'pending'
+    });
+    if (result.error) throw result.error;
+    closeModal();
+    await loadBets();
+    showToast('✅ ' + name + '님 신청 완료! 입금 후 관리자 승인을 기다려주세요');
+  } catch(e) {
+    console.error('submitRequest error:', e);
+    showToast('오류가 발생했습니다. 다시 시도해주세요', true);
+    btn.disabled = false;
+    btn.textContent = '신청하기';
+  }
 }
 
-function showToast(msg, isError = false) {
-  const t = document.getElementById('toast');
+function showToast(msg, isError) {
+  var t = document.getElementById('toast');
   t.textContent = msg;
   t.className = 'toast' + (isError ? ' error' : '');
   t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3500);
+  setTimeout(function() { t.classList.remove('show'); }, 3500);
 }
 
-// 실시간 구독
 supabaseClient.channel('bets-channel')
-  .on('postgres_changes', { event: '*', schema: 'public', table: 'bets' }, () => {
+  .on('postgres_changes', { event: '*', schema: 'public', table: 'bets' }, function() {
     loadBets();
   })
   .subscribe();
