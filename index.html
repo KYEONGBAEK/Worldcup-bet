@@ -222,7 +222,7 @@ function renderGrid() {
         pending.forEach(function(b) { innerHtml += '<span class="name-badge pending">⏳ ' + b.name + '</span>'; });
         innerHtml += '</div>';
         if (approved.length > 0) {
-          var payout = Math.round(((approvedCount * BET_AMOUNT) + ROLLOVER) / approved.length);
+          var payout = Math.round(ROLLOVER / approved.length);
           innerHtml += '<div class="cell-payout">' + payout.toLocaleString() + '원</div>';
           innerHtml += '<div class="cell-count">' + approved.length + '명 공동</div>';
         }
@@ -233,7 +233,7 @@ function renderGrid() {
     rows.appendChild(row);
   }
 
-  var totalPool = (approvedCount * BET_AMOUNT) + ROLLOVER;
+ var totalPool = ROLLOVER;;
   document.getElementById('stat-participants').textContent = approvedCount + '명';
   document.getElementById('stat-pool').textContent = totalPool.toLocaleString() + '원';
   document.getElementById('stat-remaining').textContent = (36 - filledCount) + '칸';
