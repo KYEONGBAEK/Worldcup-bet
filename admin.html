@@ -68,7 +68,7 @@
 
 <div id="adminScreen">
   <header>
-    <h1>⚽ 월드컵 베팅 관리자 | 잉글랜드 vs 아르헨티나</h1>
+    <h1>⚽ 월드컵 베팅 관리자 | 스페인 vs 아르헨티나</h1>
     <button class="logout-btn" onclick="logout()">로그아웃</button>
   </header>
   <div class="admin-content">
@@ -155,7 +155,7 @@ function renderAdmin() {
       return '<div class="bet-item">' +
         '<div class="bet-info">' +
           '<div class="bet-name">' + b.name + '</div>' +
-          '<div class="bet-score"><span class="eng">🏴 잉글랜드 ' + eng + '골</span> vs <span class="arg">' + arg + '골 아르헨티나 🇦🇷</span></div>' +
+          '<div class="bet-score"><span class="eng">🏴 스페인 ' + eng + '골</span> vs <span class="arg">' + arg + '골 아르헨티나 🇦🇷</span></div>' +
         '</div>' +
         '<span class="bet-status status-pending">대기 중</span>' +
         '<div class="bet-actions">' +
@@ -177,7 +177,7 @@ function renderAdmin() {
       return '<div class="bet-item">' +
         '<div class="bet-info">' +
           '<div class="bet-name">' + b.name + '</div>' +
-          '<div class="bet-score"><span class="eng">🏴 잉글랜드 ' + eng + '골</span> vs <span class="arg">' + arg + '골 아르헨티나 🇦🇷</span></div>' +
+          '<div class="bet-score"><span class="eng">🏴 스페인 ' + eng + '골</span> vs <span class="arg">' + arg + '골 아르헨티나 🇦🇷</span></div>' +
         '</div>' +
         '<span class="bet-status status-approved">승인 완료</span>' +
         '<div class="bet-actions">' +
@@ -193,7 +193,7 @@ function renderAdmin() {
 function renderGrid() {
   var table = document.getElementById('adminGrid');
   var html = '<thead><tr><th>아르/잉</th>';
-  for (var k = 0; k <= 5; k++) html += '<th>잉글랜드 ' + k + '골</th>';
+  for (var k = 0; k <= 5; k++) html += '<th>스페인 ' + k + '골</th>';
   html += '</tr></thead><tbody>';
   for (var a = 0; a <= 5; a++) {
     html += '<tr><th>아르헨티나 ' + a + '골</th>';
